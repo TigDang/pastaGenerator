@@ -22,19 +22,25 @@ titlesRaw = re.findall(r'[А-Я ]+\/', rawPictureText)
 # Clear strings from slashes TODO: simplify
 titles = []
 for w in titlesRaw:
-    titles.append(w.replace('/', ''))
+    titles.append(w.replace('/', '').strip())
 
 # Getting ingridients, located in the cases
 ingridientsRaw = re.findall(r"^\(([^)]+)\)", rawPictureText, flags=re.MULTILINE)
 
+# Parsing string contains full ingredients to array of ingredients
 ingridients = []
 for i in ingridientsRaw:
-    ingridients.append(re.split(r", ", i.replace("\n", "").lower(), flags=re.MULTILINE))
+    ingridients.append(re.split(r", ", i.replace("\n", " ").lower(), flags=re.MULTILINE))
+# Clearing from spaces in edges
+for i in range(len(ingridients)):
+    for k in range(len(ingridients[i])):
+        ingridients[i][k] = ingridients[i][k].strip()
 
+# Making output strings
 fulldata = []
 for i in range(len(titles)):
     fullstr = "\n" + titles[i] + ": \n"
-    fullstr += ", ".join(ingridients[i])
+    fullstr += "|".join(ingridients[i])
     fulldata.append(fullstr)
 
 
