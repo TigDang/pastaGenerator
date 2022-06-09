@@ -13,7 +13,7 @@ else:
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 config = r'--oem 3--psm 6'
 
-# Getting raw text from the picture, uses
+# Getting raw text from the picture, uses tesseract
 rawPictureText = pytesseract.image_to_string(img, config=config, lang='rus')
 
 # Getting titles from raw text (with slash at the end)
