@@ -1,14 +1,36 @@
+import numpy as np
 import components.gettingPictureText as picText
-import  components.mysqlConnector as mysql
+import components.mysqlConnector as mysql
+import components.DBwriting as dbw
 
 # Open
 c = mysql.Connect()
-select_movies_query = "SELECT * FROM ingredient"
+
+# dbw.pullPastas(c, picText.titles)
+
+# Making array of distinct ingredients
+
+distIngr = []
+for arr in picText.ingridients:
+    for i in arr:
+        distIngr.append(i)
+
+distIngr = set(distIngr)
+
+dbw.pullIngridients(c, distIngr)
+
+print(distIngr)
+
+
+queryText = "SELECT * FROM ingredient"
 with c.cursor() as cursor:
-    cursor.execute(select_movies_query)
+    cursor.execute(queryText)
     result = cursor.fetchall()
     for row in result:
            print(row)
+
+# Commit inserting
+c.commit()
 
 # And close
 mysql.Disconnect(c)
