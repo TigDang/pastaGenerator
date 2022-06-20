@@ -12,6 +12,11 @@ def GetInterpretArray(c, arr):
                 result.append(cursor.fetchall()[0])
     return result
 
+def GetRandomRecipe(size):
+    result = np.random.randint(low=0, high=2, size=size-1)
+    return result
+
+
 c = mysql.Connect()
 
 # Queries
@@ -45,4 +50,4 @@ with c.cursor() as cursor:
 
 if __name__ == '__main__':
     print(dataset)
-    print(GetInterpretArray(c, dataset[0]))
+    print(GetInterpretArray(c, GetRandomRecipe(dataset.shape[1])))
