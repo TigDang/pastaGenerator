@@ -1,11 +1,14 @@
-import components.mysqlConnector as mysql
+import mysqlConnector as mysql
 import numpy as np
 
 c = mysql.Connect()
 
+# Queries
 pastasIDquery = "SELECT DISTINCT pasta_assoc_id FROM recipe"
 ingrsIDquery = "SELECT MAX(ingrd_assoc_id) FROM recipe"
 recipesQuery = "SELECT ingrd_assoc_id FROM recipe WHERE pasta_assoc_id = {}"
+
+
 with c.cursor() as cursor:
 
     # Learn count of pastas
