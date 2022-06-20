@@ -1,6 +1,17 @@
 import mysqlConnector as mysql
 import numpy as np
 
+
+def GetInterpretArray(c, arr):
+    result = []
+    getIngrNameQuery = "SELECT ingr_name FROM ingredient WHERE ingr_id = {}"
+    with c.cursor() as cursor:
+        for i in range(len(arr)):
+            if arr[i] == 1:
+                cursor.execute(getIngrNameQuery.format(i))
+                result.append(cursor.fetchall()[0])
+    return result
+
 c = mysql.Connect()
 
 # Queries
@@ -8,9 +19,7 @@ pastasIDquery = "SELECT DISTINCT pasta_assoc_id FROM recipe"
 ingrsIDquery = "SELECT MAX(ingrd_assoc_id) FROM recipe"
 recipesQuery = "SELECT ingrd_assoc_id FROM recipe WHERE pasta_assoc_id = {}"
 
-
 with c.cursor() as cursor:
-
     # Learn count of pastas
     cursor.execute(pastasIDquery)
     pastasIDs = cursor.fetchall()
@@ -34,5 +43,6 @@ with c.cursor() as cursor:
             dataset[i][ingrID] = 1
         i += 1
 
-np.set_printoptions(precision=0)
-print(dataset)
+if __name__ == '__main__':
+    print(dataset)
+    print(GetInterpretArray(c, dataset[0]))
