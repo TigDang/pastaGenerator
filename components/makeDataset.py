@@ -1,4 +1,4 @@
-import mysqlConnector as mysql
+import components.mysqlConnector as mysql
 import numpy as np
 
 
@@ -34,13 +34,13 @@ with c.cursor() as cursor:
     cursor.execute(ingrsIDquery)
     countOfIngrs = cursor.fetchall()[0][0] + 1
 
-    # Make numpy array of dataset
+    # Make numpy array of data
     dataset = np.zeros((countOfPastas, countOfIngrs))
 
     # Coursor at the row of pasta
     i = 0
 
-    # Fill the dataset's rows the data, pull the ones to the position on ingrs
+    # Fill the data's rows the data, pull the ones to the position on ingrs
     for pastaID in pastasIDs:
         cursor.execute(recipesQuery.format(pastaID[0]))
         ingrsOfThatPasta = cursor.fetchall()

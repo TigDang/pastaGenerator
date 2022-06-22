@@ -17,7 +17,7 @@ distIngr = set(distIngr)
 
 # dbw.pullPastas(c, picText.titles) #already did this
 
-# dbw.pullRecipies(c, titles=picText.titles, ingredients=picText.ingridients)
+# dbw.pullRecipies(c, titles=picText.titles, ingredients=picText.ingridients) #already did this
 
 # Output table to check the results
 queryText = "SELECT * FROM pasta_recipies_view"
