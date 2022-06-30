@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-30T20:38:15.876Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="xIK2jaElfWAfnrdWjPIm" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-30T20:53:08.302Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="K3HEUYit9ZDeOeU0TnlT" version="20.0.4" type="github">
   <diagram id="b8H1MxFaNjbhsoSdPc-D" name="Page-1">
     <mxGraphModel dx="834" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -199,14 +199,14 @@
             <mxPoint x="652.1114561800018" y="398.9442719099992" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CjT74SGtvp8RqZ042jna-37" value="Скрытый слой&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Размер 64&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+        <mxCell id="CjT74SGtvp8RqZ042jna-37" value="Скрытый слой&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Размер 64&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Times New Roman;" vertex="1" parent="1">
           <mxGeometry x="410" y="120" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CjT74SGtvp8RqZ042jna-39" value="Входной слой&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Размер 44&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="310" y="120" width="100" height="40" as="geometry" />
+        <mxCell id="CjT74SGtvp8RqZ042jna-39" value="Входной слой&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Размер 44&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="315" y="120" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CjT74SGtvp8RqZ042jna-40" value="Выходной слой&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Размер 1&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="505" y="120" width="110" height="40" as="geometry" />
+        <mxCell id="CjT74SGtvp8RqZ042jna-40" value="Выходной слой&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Размер 1&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="510" y="120" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
