@@ -7,13 +7,17 @@ def GetInterpretArray(c, arr):
     getIngrNameQuery = "SELECT ingr_name FROM ingredient WHERE ingr_id = {}"
     with c.cursor() as cursor:
         for i in range(len(arr)):
-            if arr[i] == 1:
+            if arr[i] == 1 and i != 0:
                 cursor.execute(getIngrNameQuery.format(i))
                 result.append(cursor.fetchall()[0])
     return result
 
+
 def GetRandomRecipe(size):
-    result = np.random.randint(low=0, high=2, size=size-1)
+    result = np.zeros(size - 1)
+    ingrsCount = np.random.randint(low=1, high=7, size=1)[0]
+    for i in range(ingrsCount):
+        result[np.random.randint(low=0, high=countOfIngrs, size=1)[0]] = 1
     return result
 
 
@@ -35,7 +39,7 @@ with c.cursor() as cursor:
     countOfIngrs = cursor.fetchall()[0][0] + 1
 
     # Make numpy array of data
-    dataset = np.zeros((countOfPastas, countOfIngrs))
+    dataset = np.zeros((countOfPastas + 1, countOfIngrs))
 
     # Coursor at the row of pasta
     i = 0
