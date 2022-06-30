@@ -1,1 +1,76 @@
-<mxfile host="app.diagrams.net" modified="2022-06-30T18:13:49.958Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="eQTkd2xhvVFJRy5-MifF" version="20.0.4" type="github"><diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">7Ztdd6I6FIZ/jZftIgnycamIna5px1nVmblOIWJWA3Ehrfb8+pNoVDBY6TkqdLQ3JTshgf3shLwbbCEvXtyleDp55CFhLWiEixbqtSAEpuGIf9LyvrLYpjJEKQ1Vo61hSP8hymgo6ysNyazQMOOcZXRaNAY8SUiQFWw4Tfm82GzMWXHUKY6IZhgGmK2tt+2t/Q8Ns4myA8vdVnwjNJqowR1orSqecfASpfw1USMmPCGrmhivu1F3OZvgkM9zJuS3kJdynq2O4oVHmHTs2mer8/p7aje3kpIkq3KCZYTYeXbHJrRMM0T4Bq56eMPsVTlCXWj2vvbMfEIzMpziQJbngn4LdSdZzEQJiMPljZNQlTY3aMhClvKXjTMdYRnzJFPsoWyBGY0SUQjE9ZNUNqCMeZzxdDk26vs9COxNV/ma5Z+o0V2gvPJG0owsciblkjvCY5Kl76KJqkVAkVSxaxoqFubbOICOQjjJhYCJlBGr6Is2fW8hiAPFoSITpDHpjEZPHW+koRH3lxVpFP20jMSiU5VJc7z0FhXToaMqYhqGcphuGf4tc2OXeZ6wrcpl2Jbt1J2UhPH/ZwgrMrROgdDUEHYZj1rQYpJXSN/EYSQPv5P3OU/D2bpKjJSrLTlhyAOK5diPJKR432lfKk6A+UGcnCA07Kqh4Z4iNKzDKy6jS98Xl0+4b9k9OAU/XGQV59Our2hnbjolAMwSAOAUAOwrALvsAXc2AI4GYCgebz/u/KehRkJ0JXaA+9aXajiKGK2SxefQNqTb75od90NKJ1y/YNst0GubOj0A2iX01saj4nMPz5/8gyZPIsSzyYZR9UeL6GMqe44XkRQft6v9PryVI9IZCTuyLLuXDjJuJeGlMDHlMAnPAukk4QtBiYgduRxMNDP1qCkECiiZyQcfmwL9eDyGQXAc9KZRnLhtG+nojXPtakCFpbNWtdD3DEPf3Rx5OrbdRqkFoC+n3uDHb//pKhc+A7FWuQD0NbXP03hWsv/3MGOzm4zfdIKM8qSybnjASUgTIUGMnzgie/XGl4qYUwuH3SCpVzisc0iXtHG1dlV9rcphc/0XTKBe6bB2eI7A7/vh/WjQWOmAXLvX6dQlHdqoUdIB6qlNDdtVOxxJO1hOk7QD1FOiGvp6tUP3DNrBsRulHdb7mbx2eBgM/S+2DzyrctAQ1qocoJ5O9mNMWdmbA+FvzKq/afjD05cxky9Wr1rh82FRs1a4wCS3syvp69UKelrm4gjUrBX0pMqD3+k1VSj4fRe1UV1CwQGNEgqoQq7jKhSOJBRcq0lCAVVIstT7SZLrGsaH8/QITMS0apRSQHripec/3N99u75l+BTFWsUC0tMv/pu4u7L3DJvvjO6TZ76o/nlSjNNMnOUJT0q/XaXDf4iSerUDqpCp+dt2rgDsqvpaxQPS8zKXh6Be9YD0xIr3azgaPDb3KyXL6Tptry4FAQy3WRKiQgrkKiGOJCEANBulIfTky8+nweNg1NzJ2+1byK3tPSFA9hknryhuf/KyrMv9qAj5/wI=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-30T18:39:01.965Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="4Hdw6GJfiB-ZoZZp7AyH" version="20.0.4" type="github">
+  <diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">
+    <mxGraphModel dx="1422" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="60da8b9f42644d3a-2" value="" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;fontSize=20;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="280" y="405" width="280" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-3" value="Модуль 1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=27;fontStyle=1;fontFamily=Times New Roman;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="425" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-4" value="Чтение и обработка данных" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=18;strokeWidth=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="280" y="725" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-6" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;fontSize=27;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="300" y="485" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-7" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;fontSize=27;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="300" y="705" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-8" value="Фотография меню" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;fontSize=17;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="221" y="545" width="115" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-9" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.stylisedArrow;dy=0.6;dx=40;notch=15;feather=0.4;rounded=0;strokeWidth=1;fontSize=27;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="370" y="572.5" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-17" value="" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;fontSize=20;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="596" y="405" width="280" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-18" value="Модуль&amp;nbsp;2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=27;fontStyle=1;fontFamily=Times New Roman;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="596" y="425" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-19" value="Хранение данных в БД MySQL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=18;strokeWidth=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="596" y="725" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-20" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;fontSize=27;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="616" y="485" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-21" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;fontSize=27;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="616" y="705" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-22" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Названия &lt;br&gt;паст&amp;nbsp;и их состав&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;fontSize=14;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="520" y="545.5" width="115" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-23" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.stylisedArrow;dy=0.6;dx=40;notch=15;feather=0.4;rounded=0;strokeWidth=1;fontSize=27;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="686" y="573" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-24" value="" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;fontSize=20;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="910" y="405" width="280" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-25" value="Модуль 3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=27;fontStyle=1;fontFamily=Times New Roman;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="903" y="425" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-27" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;fontSize=27;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="930" y="485" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-28" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;fontSize=27;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="930" y="705" width="240" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-30" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.stylisedArrow;dy=0.6;dx=40;notch=15;feather=0.4;rounded=0;strokeWidth=1;fontSize=27;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="573" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60da8b9f42644d3a-36" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Коэффициенты обученной модели&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;fontSize=14;align=center;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="545" width="115" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="FN05TjhQd8mLdlcn0xAX-1" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Названия&lt;br&gt;паст&amp;nbsp;и их состав&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;fontSize=14;align=center;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="840" y="540" width="115" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="FN05TjhQd8mLdlcn0xAX-2" value="Обучение математической модели" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=18;strokeWidth=1;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="917" y="725" width="280" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
