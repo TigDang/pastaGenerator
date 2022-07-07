@@ -1,70 +1,113 @@
 import torch as torch
 import components.makeDataset as datas
 import torch.nn as nn
-import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import TensorDataset, DataLoader
+
+
+# Гиперпараметры
+EPOCHS = 500
+BATCH_SIZE = 64
+LEARNING_RATE = 0.1
+
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # Оверрайтинг абстрактной модели нейросети под нашу задачу
 class Net(nn.Module):
     def __init__(self):
-        super().__init__()
+        super(Net, self).__init__()
         # Объявление слоёв, их размера
-        self.fc1 = nn.Linear(datas.countOfIngrs, 64)
-        self.fc2 = nn.Linear(64, 64)
-        self.fc3 = nn.Linear(64, 1)
+        self.layer_1 = nn.Linear(datas.countOfIngrs, 64)
+        self.layer_2 = nn.Linear(64, 64)
+        self.layer_out = nn.Linear(64, 1)
+
+        self.relu = nn.ReLU()
+        self.dropout = nn.Dropout(p=0.1)
+        self.batchnorm1 = nn.BatchNorm1d(64)
+        self.batchnorm2 = nn.BatchNorm1d(64)
 
     # Определение функции прохода вперед по слоям
-    def forward(self, x):
-        x = self.fc1(x)
-        x = self.fc2(x)
-        x = self.fc3(x)
-        x = nn.Flatten(1, -1)(x)
+    def forward(self, inputs):
+        x = self.layer_1(inputs)
+        x = self.batchnorm1(x)
+        x = self.relu(self.layer_2(x))
+        x = self.batchnorm2(x)
+        x = self.dropout(x)
+        x = torch.sigmoid(self.layer_out(x))
+
         return x
 
 
+def binary_acc(y_pred, y_test):
+    y_pred_tag = torch.round(torch.sigmoid(y_pred))
+
+    correct_results_sum = (y_pred_tag == y_test).sum().float()
+    acc = correct_results_sum / y_test.shape[0]
+    acc = torch.round(acc * 100)
+
+    return acc
+
+
 # Объявление и вывод экземляра нашей модели
-net = Net()
-print(net)
+model = Net()
+model.to(device)
+print(model)
 
 # Обёртывание данных в тензор, объявление тензора флажков
 trainX = torch.Tensor(datas.dataset[:, :]).view(-1, datas.countOfIngrs)
 Y = torch.ones(datas.countOfPastas)
 Y=torch.cat((Y, torch.zeros(1)), 0)
 
-# testX = torch.Tensor(datas.dataset[10:, :]).view(-1, datas.countOfIngrs)
-
 # Обёртывание тензора в объект DataLoader, предназначенный для использования в модели
-trainset = torch.utils.data.DataLoader(TensorDataset(trainX, Y[:]), batch_size=1, shuffle=True)
-# testset = torch.utils.data.DataLoader(TensorDataset(testX, Y[10:]), batch_size=1, shuffle=False)
+train_loader = DataLoader(dataset=TensorDataset(trainX, Y[:]), batch_size=BATCH_SIZE, shuffle=True)
 
 # Определение функции ошибки и LR
-loss_function = nn.L1Loss()
-optimizer = optim.Adam(net.parameters(), lr=0.00001)
+criterion = nn.BCEWithLogitsLoss()
+optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
-# Процесс обучения
-for epoch in range(5000):  # столько полных проходов по нашим данным
-    for data in trainset:  # `data` это батч наших данных
-        X, y = data  # X это батч свойств, y это батч целевых переменных.
-        net.zero_grad()  # устанавливаем значение градиента в 0 перед вычислением функции потерь.
-        output = net(X.view(-1, datas.countOfIngrs))  # передаем выпрямленный батч
-        loss = loss_function(output, y)  # вычисляем функцию потерь
-        loss.backward()  # передаем это значение назад по сети
-        optimizer.step()  # пытаемся оптимизировать значение весов исходя из потерь и градиента
-    print(loss)  # выводим на экран значение функции потерь
+model.train()
+for e in range(1, EPOCHS + 1):
+    epoch_loss = 0
+    epoch_acc = 0
+    for X_batch, y_batch in train_loader:
+        X_batch, y_batch = X_batch.to(device), y_batch.to(device)
+        # Обнуляем градиент перед работой
+        optimizer.zero_grad()
 
+        # Получем предсказания модели
+        y_pred = model(X_batch)
 
-# Цикл вывода по отправке символа с клавиатуры нового рецепта пасты по критерию
-while input() == 'c':
+        # Считаем величину ошибки предсказания относительно датасета
+        loss = criterion(y_pred, y_batch.unsqueeze(1))
+        acc = binary_acc(y_pred, y_batch.unsqueeze(1))
+
+        # Распространяем ошибку назад по сети и оптимизируем
+        loss.backward()
+        optimizer.step()
+
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+
+    print(f'Epoch {e + 0:03}: | Loss: {epoch_loss / len(train_loader):.5f} | Acc: {epoch_acc / len(train_loader):.3f}')
+
+# Проверка работы модели на обучающей выборке. Должны быть выведены в основном единицы
+ansOfPastas = []
+model.eval()
+for i in range(datas.countOfPastas):
+    a = model(torch.Tensor(datas.dataset[i, :]).view(-1, datas.countOfIngrs))
+    ansOfPastas.append(a.cpu().detach().numpy()[0][0])
+    print('{} have output is'.format(i) + str(torch.round(a)))
+
+# Цикл вывода ста сгенерированных паст
+for t in range(100):
+    # Оборачиваем случайный рецепт в тензор, помещаем на вход модели и записываем результат в ans
     randomRecipe = torch.Tensor(datas.GetRandomRecipe(datas.countOfIngrs + 1)).view(-1, datas.countOfIngrs)
-    ans = net.forward(x=randomRecipe)
-    # Критерий вывода в негативном формате
-    while ans > 1.000001:
-        print(ans)
-        print('... and his recipe is ' + str(datas.GetInterpretArray(datas.c, randomRecipe.numpy().transpose().astype(int))))
-
+    model.eval()
+    ans = torch.round(model.forward(inputs=randomRecipe))
+    # Критерий вывода в негативном формате (пока модель не скажет, что рецепт - паста, делаем новый рецепт
+    while ans != 1:
         randomRecipe = torch.Tensor(datas.GetRandomRecipe(datas.countOfIngrs + 1)).view(-1, datas.countOfIngrs)
-        ans = net.forward(x=randomRecipe)
+        ans = torch.round(model.forward(inputs=randomRecipe))
 
-    print(ans)
+    # print(ans)
     print(datas.GetInterpretArray(datas.c, randomRecipe.numpy().transpose().astype(int)))
